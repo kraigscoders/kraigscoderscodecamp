@@ -83,7 +83,7 @@ MISSILE_RANGE_LONG     = (300.0, XP_LEVELS[XP_LEVEL_RANGE_LONG])
 
 # missile speed
 # pixels/second
-MISSILE_SPEED  = 80.0
+MISSILE_SPEED  = 50.0
 
 # power of the missiles, and experience levels required
 # (health points, minimum_experience)
