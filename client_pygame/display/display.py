@@ -1,4 +1,5 @@
-#
+# Images
+devil1 = pygame.image.load(os.path.join(../images\brick1.png))
 # This file is where you make the display for your game
 # Make changes and add functions as you need.
 #
@@ -89,8 +90,8 @@ class Display(BaseDisplay):
         # There are other fonts available, but they are not
         # the same on every computer.  You can read more about
         # fonts at http://www.pygame.org/docs/ref/font.html
-        self.font_size = 12
-        self.font = pygame.font.SysFont("Courier New",self.font_size)
+        self.font_size = 30
+        self.font = pygame.font.SysFont("Helvetica",self.font_size)
 
         # Colors are specified as a triple of integers from 0 to 255.
         # The values are how much red, green, and blue to use in the color.
@@ -98,11 +99,11 @@ class Display(BaseDisplay):
         # colors and find their RGB values.
         self.player_color     = (0, 255, 0)
         self.opponent_color   = (255, 0, 0)
-        self.missile_color    = (0, 255, 255)
+        self.missile_color    = (0, 0, 0)
         self.npc_color        = (255, 255, 0)
         self.wall_color       = (255, 255, 255)
-        self.text_color       = (255, 255, 255)
-        self.background_color = (0, 0, 0)
+        self.text_color       = (0, 0, 0)
+        self.background_color = (185, 227, 228)
         return
 
     def paint_pregame(self, surface, control):
@@ -195,7 +196,8 @@ class Display(BaseDisplay):
         """
         Draws walls.
         """
-        rect = self.obj_to_rect(obj)
+        #rect = self.obj_to_rect(obj)
+        rect = image.brick1.png
         pygame.draw.rect(surface, self.wall_color, rect)
         return
         
